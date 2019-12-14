@@ -24,7 +24,7 @@ export default function MakeForm(props) {
                     <CardContent>
                         <Typography>Карточка сотрудника:</Typography>
                         <Grid item>
-                            <NameFill personName={person.name} handleInputChange={props.handleInputChange}/>
+                            <NameFill personName={person.name} handleInputChange={props.handleInputChange} error={props.error}/>
                         </Grid>
                         <Grid item>
                             <JobSelect personJob={person.job} handleInputChange={props.handleInputChange}/>

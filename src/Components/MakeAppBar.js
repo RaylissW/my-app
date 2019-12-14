@@ -18,7 +18,6 @@ export default function MakeAppBar(props) {
                             Добавить
                         </Button>
                         <Button className={classes.commandButton} className="Delete" color="inherit" onClick={()=>props.deletePerson()}>
-                            {console.log(props.selectedIndex)}
                             Удалить
                         </Button>
                     </Toolbar>

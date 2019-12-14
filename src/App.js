@@ -12,14 +12,17 @@ class App extends React.Component {
         super(props);
         this.state={
             persons: [
-                {name:"Олег",job:"Frontender",date: new Date ("1989.02.12"),gender: "Male",employed:"Yes",mates:["Maxim", "Kristina"]},
-                {name:"Максим",job:"Support",date:new Date ("2000.11.26"),gender: "Male", employed:"No", mates:["Liam","Derek"]} ,
-                {name:"Лиам",job:"Analyst",date:new Date ("1999.08.1"),gender: "Male", employed:"No",mates:["Derek"]},
-                {name:"Дерек",job:"BackEnder",date:new Date ("1994.07.30"),gender: "Male",employed:"Yes",mates:[]},
-                {name:"Алиса",job:"Frontender",date:new Date ("2000.06.14"),gender: "Female",employed:"No",mates:[]},
+                {name:"Олег",job:"Frontend-разработчик",date: new Date ("1989.02.12"),gender: "Мужчина",employed:"Трудоустроен",mates:["Maxim", "Kristina"]},
+                {name:"Максим",job:"Тех. поддержкa",date:new Date ("2000.11.26"),gender: "Мужчина", employed:"Уволен", mates:["Liam","Derek"]} ,
+                {name:"Лиам",job:"Аналитик",date:new Date ("1999.08.1"),gender: "Мужчина", employed:"Уволен",mates:["Derek"]},
+                {name:"Дерек",job:"BackEnd-разработчик",date:new Date ("1994.07.30"),gender: "Мужчина",employed:"Трудоустроен",mates:[]},
+                {name:"Алиса",job:"Frontend-разработчик",date:new Date ("2000.06.14"),gender: "Женщина",employed:"Уволен",mates:[]},
             ],
             selectedIndex:undefined,
-            newPerson:{name:"",job: "",date:new Date ("1989.02.12"),gender: "",employed:"",mates:[]}
+            newPerson:{name:"",job: "",date:new Date ("1989.02.12"),gender: "",employed:"",mates:[]},
+            error:{
+                fillError:false,
+            }
         }
 
     }
@@ -32,12 +35,15 @@ class App extends React.Component {
         persons[this.state.selectedIndex][componentName]= value;
         this.setState({...this.state, persons});*/
     }
-    changeSelectedIndex (index){
-        this.setState({...this.state, selectedIndex: index});
+    changeSelectedIndex (index) {
+        if (!this.state.error.fillError)
+            this.setState({...this.state, selectedIndex: index});
+        else if (this.state.error.fillError && this.state.selectedIndex == undefined)
+            this.setState({...this.state, selectedIndex: index,error:{fillError: false}});
     }
     //@todo при удалении ставить селектед индекс в андефаинд
     deletePerson () {
-        if (undefined!==this.state.selectedIndex) {
+        if (undefined!==this.state.selectedIndex &&! this.state.error.fillError) {
             const persons = this.state.persons.slice();
             persons.splice(this.state.selectedIndex, 1);
             const selectedIndex=this.state.selectedIndex;
@@ -47,9 +53,15 @@ class App extends React.Component {
     addPerson (){
         if (undefined==this.state.selectedIndex) {
             const persons = this.state.persons.slice();
-            const newPerson=this.state.newPerson;
-            persons.push(newPerson);
-            this.setState({...this.state, persons,newPerson:{name:"",job: "",date:new Date ("1989.02.12"),gender: "",employed:"",mates:[]},selectedIndex:persons.length-1});
+            let newPerson=this.state.newPerson;
+            let selectedIndex=this.state.selectedIndex;
+            const error=this.state.error;
+            if (!newPerson["name"]=="") {
+                persons.push(newPerson);
+                newPerson={name:"",job: "",date:new Date ("1989.02.12"),gender: "",employed:"",mates:[]};
+                selectedIndex=persons.length-1;
+            }
+            this.setState({...this.state, persons,newPerson,selectedIndex});
         }
     }
     render () {

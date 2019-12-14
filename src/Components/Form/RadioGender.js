@@ -22,13 +22,13 @@ export default function RadioGender(props) {
 
                 >
                     <FormControlLabel
-                        value="Male"
+                        value="Мужчина"
                         control={<Radio color="primary" />}
                         label="Мужской"
                         labelPlacement="start"
                     />
                     <FormControlLabel
-                        value="Female"
+                        value="Женщина"
                         control={<Radio color="primary" />}
                         label="Женский"
                         labelPlacement="start"

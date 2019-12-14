@@ -5,19 +5,19 @@ import {useStyles} from '../useStyles';
 
 const jobs = [
     {
-        value: "Frontender",
+        value: "Frontend-разработчик",
         label: "Frontend-разработчик"
     },
     {
-        value: "Analyst",
+        value: "Аналитик",
         label: "Аналитик"
     },
     {
-        value: "BackEnder",
+        value: "BackEnd-разработчик",
         label: "BackEnd-разработчик"
     },
     {
-        value: "Support",
+        value: "Тех. поддержкa",
         label: "Тех. поддержкa"
     }
 ];

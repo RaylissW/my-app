@@ -20,13 +20,13 @@ export default function RadioEmployed(props) {
                         row
                     >
                         <FormControlLabel
-                            value="Yes"
+                            value="Уволен"
                             control={<Radio color="primary" />}
                             label="Да"
                             labelPlacement="start"
                         />
                         <FormControlLabel
-                            value="No"
+                            value="Трудоустроен"
                             control={<Radio color="primary" />}
                             label="Нет"
                             labelPlacement="start"

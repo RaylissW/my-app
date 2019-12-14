@@ -30,7 +30,7 @@ export default function MainBody(props) {
             </Drawer>
             <main className={classes.content}>
                 <div className={classes.toolbar} />
-                 <MakeForm persons={props.persons} selectedIndex={props.selectedIndex} newPerson={props.newPerson} handleInputChange={props.handleInputChange}/>
+                 <MakeForm persons={props.persons} selectedIndex={props.selectedIndex} newPerson={props.newPerson} handleInputChange={props.handleInputChange} error={props.error}/>
             </main>
         </div>
     );

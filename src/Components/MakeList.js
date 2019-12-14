@@ -21,7 +21,7 @@ export default function MakeList(props) {
                       onClick={event => handleListItemClick(event, index)}
                       onDoubleClick={event => handleListItemClick(event,undefined)}
                       >
-                <ListItemText primary={person.name}/>
+                <ListItemText primary={person.name + ", " + person.job + ", " + person.date.getDate()+"/"+ (person.date.getMonth()+1)+"/" + person.date.getFullYear()+ ", " + person.gender +", "  + person.employed}/>
             </ListItem>
     );
     return (
