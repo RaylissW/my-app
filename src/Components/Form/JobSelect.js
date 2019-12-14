@@ -36,7 +36,7 @@ export default function JobSelect(props) {
                 id="standard-select-job"
                 select
                 label="Обязательно к заполнению"
-                value={props.personJob}
+                value={(props.selectedIndex==undefined) ? "Frontend-разработчик" : props.personJob}
                 onChange={props.handleInputChange}
                 helperText="Должность, занимаемая сотрудником"
                 name="job"

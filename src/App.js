@@ -28,12 +28,6 @@ class App extends React.Component {
     }
     handleInputChange(event) {
         this.setState(handleInputChange(this.state, event));
-        /*const target = event.target;
-        const value = target.type === 'select' ? target.checked : target.value;
-        const componentName = target.name;
-        const persons = this.state.persons.slice();
-        persons[this.state.selectedIndex][componentName]= value;
-        this.setState({...this.state, persons});*/
     }
     changeSelectedIndex (index) {
         if (!this.state.error.fillError)
@@ -58,9 +52,11 @@ class App extends React.Component {
             const error=this.state.error;
             if (!newPerson["name"]=="") {
                 persons.push(newPerson);
-                newPerson={name:"",job: "",date:new Date ("1989.02.12"),gender: "",employed:"",mates:[]};
+                newPerson={name:"",job: "",date:new Date ("1989.02.12"),gender: "",employed:""};
                 selectedIndex=persons.length-1;
             }
+            else
+                error.fillError=true;
             this.setState({...this.state, persons,newPerson,selectedIndex});
         }
     }

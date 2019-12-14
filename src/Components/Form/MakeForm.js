@@ -27,7 +27,7 @@ export default function MakeForm(props) {
                             <NameFill personName={person.name} handleInputChange={props.handleInputChange} error={props.error}/>
                         </Grid>
                         <Grid item>
-                            <JobSelect personJob={person.job} handleInputChange={props.handleInputChange}/>
+                            <JobSelect personJob={person.job} handleInputChange={props.handleInputChange} selectedIndex={props.selectedIndex}/>
                         </Grid>
                         <Grid item>
                             <DateOfBirth  personDate={person.date} handleInputChange={props.handleInputChange}/>
