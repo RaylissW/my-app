@@ -37,7 +37,7 @@ class App extends React.Component {
     }
     //@todo при удалении ставить селектед индекс в андефаинд
     deletePerson () {
-        if (undefined!==this.state.selectedIndex &&! this.state.error.fillError) {
+        if (undefined!==this.state.selectedIndex) {
             const persons = this.state.persons.slice();
             persons.splice(this.state.selectedIndex, 1);
             const selectedIndex=this.state.selectedIndex;
