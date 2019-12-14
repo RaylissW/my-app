@@ -2,7 +2,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
-const drawerWidth = 300;
+const drawerWidth = 400;
 export const useStyles = makeStyles(theme => ({
         root: {
             display: "flex",
@@ -13,7 +13,7 @@ export const useStyles = makeStyles(theme => ({
         },
         commandButton: {
             marginLeft: theme.spacing(15),
-            marginRight: theme.spacing(20)
+            marginRight: theme.spacing(30)
         },
         drawer: {
             width: drawerWidth,

@@ -38,9 +38,6 @@ export default function MakeForm(props) {
                         <Grid item>
                             <RadioEmployed personEmployed={person.employed} handleInputChange={props.handleInputChange}/>
                         </Grid>
-                        <Grid item>
-                            <Mates personMates={person.mates}/>
-                        </Grid>
                     </CardContent>
                 </Card>
 

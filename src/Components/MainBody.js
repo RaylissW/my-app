@@ -6,7 +6,7 @@ import MakeList from './MakeList';
 import MakeForm from './Form/MakeForm';
 import {useStyles} from './useStyles';
 
-const drawerWidth = 300;
+const drawerWidth = 400;
 
 
 
