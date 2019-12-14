@@ -8,7 +8,6 @@ import JobSelect from './JobSelect';
 import DateOfBirth from './DateOfBirth';
 import RadioGender from './RadioGender';
 import RadioEmployed from './RadioEmployed';
-import Mates from './Mates';
 import {useStyles} from '../useStyles';
 
 
