@@ -9,17 +9,25 @@ import {useStyles} from './useStyles';
 
 export default function MakeAppBar(props) {
     const classes = useStyles();
+   // document.getElementById("test").disabled = true;
     return (
         <div className={classes.root}>
                 <AppBar position="fixed" className={classes.appBar}>
                     <Toolbar>
                         <Typography>Список Сотрудников</Typography>
-                        <Button className={classes.commandButton} className="Add" onClick={()=>props.addPerson()} color="inherit">
+                        <Button  className={classes.commandButton} className="Add" onClick={()=>props.addPerson()} color="inherit">
                             Добавить
                         </Button>
-                        <Button className={classes.commandButton} className="Delete" color="inherit" onClick={()=>props.deletePerson()}>
-                            Удалить
-                        </Button>
+                        {(props.selectedIndex == undefined) ?
+                            <Button disabled id="test" className={classes.commandButton} className="Delete"
+                                    color="inherit" onClick={() => props.deletePerson()}>
+                                Удалить
+                            </Button>
+                            : <Button id="test" className={classes.commandButton} className="Delete" color="inherit"
+                                      onClick={() => props.deletePerson()}>
+                                Удалить
+                            </Button>
+                        }
                     </Toolbar>
                 </AppBar>
         </div>

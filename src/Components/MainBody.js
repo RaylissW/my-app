@@ -15,7 +15,7 @@ export default function MainBody(props) {
     return (
         <div className={classes.root}>
             <CssBaseline/>
-            <MakeAppBar deletePerson={props.deletePerson} addPerson={props.addPerson}/>
+            <MakeAppBar deletePerson={props.deletePerson} addPerson={props.addPerson} selectedIndex={props.selectedIndex}/>
             {props.persons[0].name
             }
             <Drawer

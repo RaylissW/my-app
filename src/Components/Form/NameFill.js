@@ -4,14 +4,6 @@ import {useStyles} from '../useStyles';
 
 export default function NameFill(props) {
     const classes = useStyles();
-    /*
-    let labeltext;
-    if (props.error.fillError===true)
-        labeltext = props.error.errorText;
-        else  labeltext= "Обязательно к заполнению";
-        */
-    console.log(props.error.fillError? 'Поле не заполнено!' : 'Обязательно к заполнению');
-
     return props.error.fillError ? (
         <div className={classes.root}>
             <TextField
