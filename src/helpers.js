@@ -3,7 +3,7 @@ export function handleInputChange(state, event) {
     const target = event.target;
     //const value = target.type === 'select' ? target.checked : target.value;
     //debugger;
-    const value = (target.name=="name")? target.value.trim(): target.value;
+    const value = (target.name=="name")? target.value.replace(/^\s+/g, ''): target.value;
     const field = target.name;
     const persons = state.persons.slice();
     const newPerson=state.newPerson;
