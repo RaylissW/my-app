@@ -12,11 +12,11 @@ class App extends React.Component {
         super(props);
         this.state={
             persons: [
-                {name:"Олег",job:"Frontend-разработчик",date: new Date ("1989.02.12"),gender: "Мужчина",employed:"Трудоустроен"},
-                {name:"Максим",job:"Тех. поддержкa",date:new Date ("2000.11.26"),gender: "Мужчина", employed:"Уволен"} ,
-                {name:"Лиам",job:"Аналитик",date:new Date ("1999.08.1"),gender: "Мужчина", employed:"Уволен"},
-                {name:"Дерек",job:"BackEnd-разработчик",date:new Date ("1994.07.30"),gender: "Мужчина",employed:"Трудоустроен"},
-                {name:"Алиса",job:"Frontend-разработчик",date:new Date ("2000.06.14"),gender: "Женщина",employed:"Уволен"},
+                {name:"Олегов Олег Олегович",job:"Frontend-разработчик",date: new Date ("1989.02.12"),gender: "Мужчина",employed:"Трудоустроен"},
+                {name:"Евсеенков Максим Дмитриевич",job:"Тех. поддержкa",date:new Date ("2000.11.26"),gender: "Мужчина", employed:"Уволен"} ,
+                {name:"Камски Лиам Арсеньевич",job:"Аналитик",date:new Date ("1999.08.1"),gender: "Мужчина", employed:"Уволен"},
+                {name:"Хейл Дерек Олегович",job:"BackEnd-разработчик",date:new Date ("1994.07.30"),gender: "Мужчина",employed:"Трудоустроен"},
+                {name:"Мощанская Алиса Евгеньевна",job:"Frontend-разработчик",date:new Date ("2000.06.14"),gender: "Женщина",employed:"Уволен"},
             ],
             selectedIndex:undefined,
             newPerson:{name:"",job: "",date:new Date ("1989.02.12"),gender: "",employed:""},
