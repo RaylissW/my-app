@@ -14,6 +14,7 @@ export default function MakeList(props) {
        // props.formChange.selectedIndex=(index);
     };
     const persons = props.persons;
+  //  {(persons.length)}
     const listItems = persons.map((person,index) =>
             <ListItem key={index}
                       button
