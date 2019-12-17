@@ -26,7 +26,7 @@ export default function MakeList(props) {
             </ListItem>
     );
     return (
-        <div className={classes.toolbar}>
+        <div >
             <List >
                 {listItems}
             </List>

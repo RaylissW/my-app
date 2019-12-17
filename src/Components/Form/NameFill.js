@@ -13,7 +13,6 @@ export default function NameFill(props) {
                 label= {props.error.fillError? 'Поле не заполнено!' : 'Обязательно к заполнению'}
                 placeholder="ФИО"
                 helperText="Фамилия Имя Отчество сотрудника"
-                fullWidth
                 margin="normal"
                 onChange={props.handleInputChange}
                 value={props.personName}
@@ -28,7 +27,6 @@ export default function NameFill(props) {
                 label= {props.error.fillError? 'Поле не заполнено!' : 'Обязательно к заполнению'}
                 placeholder="ФИО"
                 helperText="Фамилия Имя Отчество сотрудника"
-                fullWidth
                 margin="normal"
                 onChange={props.handleInputChange}
                 value={props.personName}
