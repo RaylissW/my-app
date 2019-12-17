@@ -1,5 +1,4 @@
 import React from "react";
-import Grid from "@material-ui/core/Grid";
 import DateFnsUtils from "@date-io/date-fns";
 import {
     MuiPickersUtilsProvider,
@@ -13,9 +12,8 @@ import {handleInputChange} from "../../helpers";
 export default function DateOfBirth(props) {
     const classes = useStyles();
     return (
-        <div className={classes.root}>
+        <div >
             <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                <Grid container justify="space-around">
                     <KeyboardDatePicker
                         disableToolbar
                         variant="inline"
@@ -38,7 +36,6 @@ export default function DateOfBirth(props) {
                             "aria-label": "change date"
                         }}
                     />
-                </Grid>
             </MuiPickersUtilsProvider>
         </div>
     );

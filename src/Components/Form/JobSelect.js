@@ -30,7 +30,7 @@ export default function JobSelect(props) {
         console.log(event.target.value);
     };
     return (
-        <div className={classes.root}>
+        <div style={{display:"block"}}>
             <TextField
                 required
                 id="standard-select-job"

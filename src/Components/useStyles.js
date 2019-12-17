@@ -6,7 +6,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const drawerWidth = 400;
 export const useStyles = makeStyles(theme => ({
-    /*
+
         root: {
             display: "flex",
             flexWrap: "wrap"
@@ -37,6 +37,6 @@ export const useStyles = makeStyles(theme => ({
         card: {
             minWidth: 275,
         },
-        */
+
 
     }));

@@ -5,7 +5,7 @@ import {useStyles} from '../useStyles';
 export default function NameFill(props) {
     const classes = useStyles();
     return props.error.fillError ? (
-        <div className={classes.root}>
+        <div style={{display:"block"}}>
             <TextField
                 error
                 required
@@ -20,7 +20,7 @@ export default function NameFill(props) {
             />
         </div>
     ) : (
-        <div className={classes.root}>
+        <div style={{display:"block"}}>
             <TextField
                 required
                 id="standard-required"

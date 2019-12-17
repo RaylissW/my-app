@@ -18,27 +18,14 @@ export default function MakeForm(props) {
 
     return (
         <div>
-            <form className={classes.root} noValidate autoComplete="off">
-                <Card className={classes.card}>
-                    <CardContent>
-                        <Typography>Карточка сотрудника:</Typography>
-                        <Grid item>
-                            <NameFill personName={person.name} handleInputChange={props.handleInputChange} error={props.error}/>
-                        </Grid>
-                        <Grid item>
-                            <JobSelect personJob={person.job} handleInputChange={props.handleInputChange} selectedIndex={props.selectedIndex}/>
-                        </Grid>
-                        <Grid item>
-                            <DateOfBirth  personDate={person.date} handleInputChange={props.handleInputChange}/>
-                        </Grid>
-                        <Grid item>
-                            <RadioGender personGender={person.gender} handleInputChange={props.handleInputChange}/>
-                        </Grid>
-                        <Grid item>
-                            <RadioEmployed personEmployed={person.employed} handleInputChange={props.handleInputChange}/>
-                        </Grid>
-                    </CardContent>
-                </Card>
+            <form styles={{display: 'flex', flexDirection: 'column'}} noValidate autoComplete="off" >
+
+                    <Typography>Карточка сотрудника:</Typography>
+                    <NameFill personName={person.name} handleInputChange={props.handleInputChange} error={props.error} />
+                    <JobSelect personJob={person.job} handleInputChange={props.handleInputChange} selectedIndex={props.selectedIndex} />
+                    <DateOfBirth  personDate={person.date} handleInputChange={props.handleInputChange} />
+                    <RadioGender personGender={person.gender} handleInputChange={props.handleInputChange} />
+                    <RadioEmployed personEmployed={person.employed} handleInputChange={props.handleInputChange} />
 
             </form>
         </div>
