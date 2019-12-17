@@ -6,10 +6,9 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const drawerWidth = 400;
 export const useStyles = makeStyles(theme => ({
-
+/*
         root: {
-            display: "flex",
-            flexWrap: "wrap"
+            backgroundColor: theme.palette.background.paper,
       },
         appBar: {
             zIndex: theme.zIndex.drawer + 1
@@ -34,9 +33,10 @@ export const useStyles = makeStyles(theme => ({
             marginTop: theme.spacing(3)
         },
         toolbar: theme.mixins.toolbar,
+
         card: {
             minWidth:275,
         },
-
+*/
 
     }));

@@ -25,9 +25,7 @@ export default function MainBody(props) {
                     container
                     className="grid-list"
                 >
-                    <br/>
-                    <br/>
-                    <br/>
+                    <br/><br/><br/>
              <MakeList persons={props.persons} selectedIndex={props.selectedIndex} changeSelectedIndex={props.changeSelectedIndex}/>
                 </div>
 
@@ -36,11 +34,7 @@ export default function MainBody(props) {
                     className="grid-form"
                 >
             <main className={classes.content}>
-                <div className={classes.toolbar} />
-                <br/>
-                <br/>
-                <br/>
-                <br/>
+                <br/><br/><br/>
                  <MakeForm persons={props.persons} selectedIndex={props.selectedIndex} newPerson={props.newPerson} handleInputChange={props.handleInputChange} error={props.error}/>
             </main>
                 </div>

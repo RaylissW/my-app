@@ -26,7 +26,7 @@ export default function MakeList(props) {
             </ListItem>
     );
     return (
-            <List >
+            <List className={classes.root}>
                 {listItems}
             </List>
     );

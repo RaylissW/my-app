@@ -22,5 +22,6 @@ body {
 
 .grid-form{
     flex:2;
+    overflow: auto;
 }
 
