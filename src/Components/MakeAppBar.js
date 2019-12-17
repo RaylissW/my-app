@@ -8,10 +8,9 @@ import {useStyles} from './useStyles';
 
 export default function MakeAppBar(props) {
     const classes = useStyles();
-   // document.getElementById("test").disabled = true;
+
     return (
-        <div className={classes.root}>
-                <AppBar position="fixed" className={classes.appBar}>
+                <AppBar position={"absolute"} className={classes.appBar}>
                     <Toolbar>
                         {(props.selectedIndex == undefined) ?
                             <Button className={classes.commandButton} className="Add" onClick={() => props.addPerson()}
@@ -36,6 +35,5 @@ export default function MakeAppBar(props) {
                         }
                     </Toolbar>
                 </AppBar>
-        </div>
     );
 }

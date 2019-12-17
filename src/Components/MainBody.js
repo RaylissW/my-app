@@ -6,7 +6,7 @@ import MakeList from './MakeList';
 import MakeForm from './Form/MakeForm';
 import {useStyles} from './useStyles';
 import Grid from "@material-ui/core/Grid";
-
+import './styles.css';
 const drawerWidth = 400;
 
 
@@ -14,30 +14,37 @@ const drawerWidth = 400;
 export default function MainBody(props) {
     const classes = useStyles();
     return (
-        <div className={classes.root}>
-            <CssBaseline/>
-            <MakeAppBar deletePerson={props.deletePerson} addPerson={props.addPerson} selectedIndex={props.selectedIndex}/>
-            <Grid container className="grid-container">
-                <Grid
-                    item
-                    xs={4}
-                    className={"grid-column"}
-                >
-                <div className={classes.toolbar} />
-             <MakeList persons={props.persons} selectedIndex={props.selectedIndex} changeSelectedIndex={props.changeSelectedIndex}/>
-                </Grid>
+        <div className="appscreen">
+            <div className="appbar" >
 
-                <Grid
-                    item
-                    xs={8}
-                    className={"grid-column"}
+                   <CssBaseline/>
+                    < MakeAppBar deletePerson={props.deletePerson} addPerson={props.addPerson} selectedIndex={props.selectedIndex}/>
+            </div>
+            <div container className="grid-container">
+                <div
+                    container
+                    className="grid-list"
+                >
+                    <br/>
+                    <br/>
+                    <br/>
+             <MakeList persons={props.persons} selectedIndex={props.selectedIndex} changeSelectedIndex={props.changeSelectedIndex}/>
+                </div>
+
+                <div
+                    container
+                    className="grid-form"
                 >
             <main className={classes.content}>
                 <div className={classes.toolbar} />
+                <br/>
+                <br/>
+                <br/>
+                <br/>
                  <MakeForm persons={props.persons} selectedIndex={props.selectedIndex} newPerson={props.newPerson} handleInputChange={props.handleInputChange} error={props.error}/>
             </main>
-                </Grid>
-            </Grid>
+                </div>
+            </div>
         </div>
     );
 }

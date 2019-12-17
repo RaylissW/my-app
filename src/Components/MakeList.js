@@ -26,10 +26,8 @@ export default function MakeList(props) {
             </ListItem>
     );
     return (
-        <div >
             <List >
                 {listItems}
             </List>
-        </div>
     );
 }
