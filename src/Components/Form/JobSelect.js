@@ -1,7 +1,6 @@
 import React from "react";
 import TextField from "@material-ui/core/TextField";
 import MenuItem from "@material-ui/core/MenuItem";
-import {useStyles} from '../useStyles';
 
 const jobs = [
     {
@@ -23,19 +22,12 @@ const jobs = [
 ];
 
 export default function JobSelect(props) {
-    const classes = useStyles();
-    let personJob=props.personJob;
-    console.log(personJob);
-    const handleChange = event => {
-        console.log(event.target.value);
-    };
     return (
         <div style={{display:"block"}}>
             <TextField
                 required
                 id="standard-select-job"
                 select
-                label="Обязательно к заполнению"
                 value={(props.selectedIndex==undefined) ? "Frontend-разработчик" : props.personJob}
                 onChange={props.handleInputChange}
                 helperText="Должность, занимаемая сотрудником"

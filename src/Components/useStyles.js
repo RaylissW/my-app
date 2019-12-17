@@ -35,7 +35,7 @@ export const useStyles = makeStyles(theme => ({
         },
         toolbar: theme.mixins.toolbar,
         card: {
-            minWidth: 275,
+            minWidth:275,
         },
 
 

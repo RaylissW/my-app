@@ -24,8 +24,8 @@ export default function NameFill(props) {
             <TextField
                 required
                 id="standard-required"
-                label= {props.error.fillError? 'Поле не заполнено!' : 'Обязательно к заполнению'}
-                placeholder="ФИО"
+                label= {props.error.fillError? 'Поле не заполнено!' : ''}
+                placeholder="ФИО*"
                 helperText="Фамилия Имя Отчество сотрудника"
                 margin="normal"
                 onChange={props.handleInputChange}

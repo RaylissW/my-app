@@ -19,14 +19,16 @@ export default function MakeForm(props) {
     return (
         <div>
             <form styles={{display: 'flex', flexDirection: 'column'}} noValidate autoComplete="off" >
-
+              <Card>
+                  <CardContent>
                     <Typography>Карточка сотрудника:</Typography>
                     <NameFill personName={person.name} handleInputChange={props.handleInputChange} error={props.error} />
                     <JobSelect personJob={person.job} handleInputChange={props.handleInputChange} selectedIndex={props.selectedIndex} />
                     <DateOfBirth  personDate={person.date} handleInputChange={props.handleInputChange} />
                     <RadioGender personGender={person.gender} handleInputChange={props.handleInputChange} />
                     <RadioEmployed personEmployed={person.employed} handleInputChange={props.handleInputChange} />
-
+                  </CardContent>
+              </Card>
             </form>
         </div>
     );
