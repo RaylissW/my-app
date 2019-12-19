@@ -1,20 +1,15 @@
 import React from "react";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-import ListItemText from "@material-ui/core/ListItemText";
-import {useStyles} from './useStyles';
+import ListItemText from "@material-ui/core/ListItemText";;
 
 
 
 export default function MakeList(props) {
-    const classes = useStyles();
     const handleListItemClick = (event, index) => {
         props.changeSelectedIndex(index);
-        //props.deletePerson.selectedIndex=index;
-       // props.formChange.selectedIndex=(index);
     };
     const persons = props.persons;
-  //  {(persons.length)}
     const listItems = persons.map((person,index) =>
             <ListItem key={index}
                       button
@@ -26,7 +21,7 @@ export default function MakeList(props) {
             </ListItem>
     );
     return (
-            <List className={classes.root}>
+            <List >
                 {listItems}
             </List>
     );

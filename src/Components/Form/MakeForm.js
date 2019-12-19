@@ -1,19 +1,15 @@
 import React from "react";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
-import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import NameFill from './NameFill';
 import JobSelect from './JobSelect';
 import DateOfBirth from './DateOfBirth';
 import RadioGender from './RadioGender';
 import RadioEmployed from './RadioEmployed';
-import {useStyles} from '../useStyles';
 
 
 export default function MakeForm(props) {
-    const classes = useStyles()
-  //  const selectedIndex = props.formChange.selectedIndex;
     const person= (undefined==props.selectedIndex) ? props.newPerson : props.persons[props.selectedIndex];
 
     return (

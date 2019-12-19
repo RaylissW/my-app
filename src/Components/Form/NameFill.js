@@ -1,9 +1,7 @@
 import React from "react";
 import TextField from "@material-ui/core/TextField";
-import {useStyles} from '../useStyles';
 
 export default function NameFill(props) {
-    const classes = useStyles();
     return props.error.fillError ? (
         <div style={{display:"block"}}>
             <TextField

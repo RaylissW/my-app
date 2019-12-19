@@ -4,12 +4,11 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormControl from "@material-ui/core/FormControl";
 import FormLabel from "@material-ui/core/FormLabel";
 import Radio from "@material-ui/core/Radio";
-import {useStyles} from '../useStyles';
+
 
 export default function RadioEmployed(props) {
-    const classes = useStyles();
     return (
-        <div className={classes.root}>
+        <div >
                 <FormControl component="fieldset">
                     <FormLabel component="legend">Уволен?</FormLabel>
                     <RadioGroup

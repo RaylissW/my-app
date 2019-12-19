@@ -5,12 +5,10 @@ import {
     KeyboardDatePicker
 } from "@material-ui/pickers";
 import "date-fns";
-import {useStyles} from '../useStyles';
-import {handleInputChange} from "../../helpers";
+
 
 
 export default function DateOfBirth(props) {
-    const classes = useStyles();
     return (
         <div >
             <MuiPickersUtilsProvider utils={DateFnsUtils}>
